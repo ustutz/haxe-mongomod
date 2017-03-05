@@ -191,7 +191,7 @@ class Protocol
 			return null;
 	}
 
-	public inline function response(documents:Array<Dynamic>):Int64
+	public inline function response(documents:Array<Dynamic>):Null<Int64>
 	{
 		var details = read();
 		

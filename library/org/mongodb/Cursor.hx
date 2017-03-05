@@ -35,7 +35,7 @@ class Cursor
 	
 	var protocol : Protocol;
 	var collection : String;
-	var cursorId : Int64;
+	var cursorId : Null<Int64>;
 	var documents : Array<Dynamic>;
 	var finished : Bool;
 	
@@ -55,7 +55,7 @@ class Cursor
 		if (documents.length == 0)
 		{
 			finished = true;
-			if (cursorId != cast null)
+			if (cursorId != null)
 			{
 				protocol.killCursors([cursorId]);
 			}
